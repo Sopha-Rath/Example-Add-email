@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<title>Add and delete table row using jQuery</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".add-row").click(function(){
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var results = "<tr><td><input type='checkbox' name='liveRow'></td><td>" + name + "</td><td>" + email + "</td></tr>";
+            $("table tbody").append(results);
+        });
+        
+        $(".remove-row").click(function(){
+            $("table tbody").find('input[name="liveRow"]').each(function(){
+            	if($(this).is(":checked")){
+                    $(this).parents("tr").remove();
+                }
+            });
+        });
+    });    
+</script>
+</head>
+<body>
+    <div class="image"><img src="back.png" height="90px"></div>
+    <form>
+        <input type="text" id="name" placeholder="User Name">
+        <input type="text" id="email" placeholder="Email Address">
+    	<input type="button" class="add-row" value="Add Row">
+    </form>
+    <h3>Add and delete table row using jQuery Example</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Select User</th>
+                <th>User Name</th>
+                <th>User Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- <td><input type="checkbox" name="liveRow"></td> -->
+                <!-- <td>Jaydeep Gondaliya</td>
+                <td>Jaydeepgondaliya@gmail.com</td> -->
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" class="remove-row">Remove Row</button>
+</body> 
+</html>                            

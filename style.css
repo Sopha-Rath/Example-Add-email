@@ -1,0 +1,46 @@
+body {
+    width: 100%;
+}
+form, h3{
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.image img {
+    width: 100%;
+}
+form input, button{
+    padding: 10px;
+}
+button {
+    background: orangered;
+    color: #fff;
+}
+button:hover {
+    background: rgb(204, 47, 7);
+}
+.add-row {
+    background: blue;
+}
+.add-row:hover {
+    background: rgb(7, 7, 194);
+}
+table{
+    width: 100%;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+    background-color: rgb(61, 150, 201);
+    color: #fff;
+    border: none;
+}
+table:hover {
+    background: rgb(12, 12, 190);
+}
+table, th, td{
+    border: 1px solid #b30707;
+}
+table th, table td{
+    padding: 10px;
+    text-align: left;
+}
